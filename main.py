@@ -34,11 +34,16 @@ def snowflake_side(length, levels):
    left(60)
    snowflake_side(length, levels -1)
 
-def create_snowflake():
-   pass
+def create_snowflake(sides, length):
 
-# left(90)
-# tree(70, 5, 30)
+   for _ in range(sides):
+      snowflake_side(length, sides)
+      right(360/sides)
+   
 
-snowflake_side(200, 3)
+
+create_snowflake(3, 200)
+left(90)
+tree(70, 5, 30)
+
 mainloop()
